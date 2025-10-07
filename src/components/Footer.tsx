@@ -22,7 +22,7 @@ const Footer = () => {
                 Altijd up-to-date en direct toepasbaar in uw dagelijkse werk.
               </p>
               <p className="text-sm text-primary-foreground/60">
-                Speciaal ontwikkeld voor IBM Maximo EAM en Maximo Manage (MAS 8)
+                Speciaal ontwikkeld voor IBM Maximo EAM en Maximo Manage (MAS 9)
               </p>
             </div>
 
@@ -52,18 +52,18 @@ const Footer = () => {
                 </div>
                 <div>
                   <a 
-                    href="mailto:info@maximodirect.nl"
+                    href="mailto:Sales@compris.eu"
                     className="hover:text-primary-foreground transition-corporate"
                   >
-                    info@maximodirect.nl
+                    Sales@compris.eu
                   </a>
                 </div>
                 <div>
                   <a 
-                    href="tel:+31000000000"
+                    href="tel:+31641451785"
                     className="hover:text-primary-foreground transition-corporate"
                   >
-                    +31 (0) [voorbeeldnummer]
+                    +31 (0)641451785
                   </a>
                 </div>
               </div>
@@ -77,7 +77,7 @@ const Footer = () => {
                 © {currentYear} MaximoDirect - ComOps. Alle rechten voorbehouden.
               </p>
               <p className="text-primary-foreground/60 text-sm">
-                IBM Maximo EAM & Maximo Manage (MAS 8) Trainingen
+                IBM Maximo EAM & Maximo Manage (MAS 9) Trainingen
               </p>
             </div>
           </div>

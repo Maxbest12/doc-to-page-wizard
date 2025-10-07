@@ -19,7 +19,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="text-2xl font-bold">MaximoDirect</div>
-            <div className="hidden sm:block text-sm opacity-80">ComOps</div>
+            <div className="hidden sm:block text-sm opacity-80">Powered by ComOps</div>
           </div>
 
           {/* Desktop Navigation */}

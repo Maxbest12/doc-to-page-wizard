@@ -18,7 +18,7 @@ const TrainingSection = () => {
     },
     {
       title: "Maximo Manage", 
-      versions: "MAS 8",
+      versions: "MAS 9",
       formats: ["Klassikale trainingen"],
       icon: <Users className="h-6 w-6" />,
       features: [

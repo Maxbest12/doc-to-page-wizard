@@ -12,14 +12,14 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       label: "E-mail",
-      value: "info@maximodirect.nl",
-      link: "mailto:info@maximodirect.nl"
+      value: "Sales@compris.eu",
+      link: "mailto:Sales@compris.eu"
     },
     {
       icon: <Phone className="h-6 w-6" />,
       label: "Telefoon", 
-      value: "+31 (0) [voorbeeldnummer]",
-      link: "tel:+31000000000"
+      value: "+31 (0)641451785",
+      link: "tel:+31641451785"
     }
   ];
 
@@ -41,7 +41,7 @@ const ContactSection = () => {
               className="text-lg px-8 py-6 shadow-corporate group"
               asChild
             >
-              <a href="mailto:info@maximodirect.nl">
+              <a href="mailto:Sales@compris.eu">
                 Neem Contact Op
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>

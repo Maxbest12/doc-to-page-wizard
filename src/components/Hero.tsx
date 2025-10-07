@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-maximo.jpg";
+import heroImage from "@/assets/hero-cloud.jpg";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
@@ -22,7 +22,7 @@ const Hero = () => {
           
           <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90 max-w-3xl mx-auto">
             MaximoDirect helpt organisaties en professionals snel en effectief 
-            vertrouwd te raken met IBM Maximo EAM en Maximo Manage (MAS 8). 
+            vertrouwd te raken met IBM Maximo EAM en Maximo Manage (MAS 9). 
             Praktische trainingen die direct toepasbaar zijn in uw dagelijkse werk.
           </p>
 
@@ -41,8 +41,8 @@ const Hero = () => {
             
             <Button 
               size="lg" 
-              variant="outline" 
-              className="text-lg px-8 py-6 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              variant="secondary"
+              className="text-lg px-8 py-6 shadow-corporate"
               asChild
             >
               <a href="#contact">Neem Contact Op</a>
