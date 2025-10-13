@@ -6,7 +6,7 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: <Building2 className="h-6 w-6" />,
-      label: "Bedrijf",
+      label: "Wij zijn",
       value: "MaximoDirect (ComOps)"
     },
     {
