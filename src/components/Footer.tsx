@@ -52,10 +52,10 @@ const Footer = () => {
                 </div>
                 <div>
                   <a 
-                    href="mailto:Sales@compris.eu"
+                    href="mailto:sales@compris.eu"
                     className="hover:text-primary-foreground transition-corporate"
                   >
-                    Sales@compris.eu
+                    sales@compris.eu
                   </a>
                 </div>
                 <div>
