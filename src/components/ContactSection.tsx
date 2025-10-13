@@ -12,8 +12,8 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       label: "E-mail",
-      value: "Sales@compris.eu",
-      link: "mailto:Sales@compris.eu"
+      value: "sales@compris.eu",
+      link: "mailto:sales@compris.eu"
     },
     {
       icon: <Phone className="h-6 w-6" />,
@@ -41,7 +41,7 @@ const ContactSection = () => {
               className="text-lg px-8 py-6 shadow-corporate group"
               asChild
             >
-              <a href="mailto:Sales@compris.eu">
+              <a href="mailto:sales@compris.eu">
                 Neem Contact Op
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
