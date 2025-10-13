@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-cloud.jpg";
+import logoWit from "@/assets/logo_wit.png";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
@@ -16,6 +17,14 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center text-primary-foreground">
+          <div className="mb-8 flex justify-center">
+            <img 
+              src={logoWit} 
+              alt="MaximoDirect Logo" 
+              className="h-24 md:h-32 w-auto"
+            />
+          </div>
+          
           <h1 className="mb-6 leading-tight">
             Praktijkgerichte IBM Maximo Trainingen
           </h1>
