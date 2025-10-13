@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Monitor, Users, Clock, CheckCircle } from "lucide-react";
+import { Monitor, Users, Clock, CheckCircle, Timer } from "lucide-react";
 
 const TrainingSection = () => {
   const trainings = [
@@ -93,7 +93,7 @@ const TrainingSection = () => {
               {benefits.map((benefit, index) => (
                 <Card key={index} className="p-6 border-primary/20">
                   <div className="flex items-start gap-3">
-                    <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                    <Timer className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                     <p className="text-sm text-card-foreground font-medium leading-relaxed">
                       {benefit}
                     </p>
