@@ -8,7 +8,7 @@ const Header = () => {
   const navigationItems = [
     { name: "Home", href: "#home" },
     { name: "Waarom MaximoDirect?", href: "#waarom-maximodirect" },
-    { name: "Over Ons", href: "#over-ons" },
+    { name: "Trainingen", href: "#trainingen" },
     { name: "Contact", href: "#contact" },
   ];
 
