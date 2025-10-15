@@ -9,7 +9,7 @@ const Header = () => {
     { name: "Home", href: "#home" },
     { name: "Waarom MaximoDirect?", href: "#waarom-maximodirect" },
     { name: "Trainingen", href: "#trainingen" },
-    { name: "Over ons", href: "#over-ons" },
+    { name: "Over Ons", href: "#over-ons" },
     { name: "Contact", href: "#contact" },
   ];
 
