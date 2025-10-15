@@ -69,9 +69,14 @@ const ContactSection = () => {
                       {info.value}
                     </a>
                   ) : (
-                    <p className="text-primary-foreground/80 font-medium">
+                    <a 
+                      href="https://www.comops.nl/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate font-medium"
+                    >
                       {info.value}
-                    </p>
+                    </a>
                   )}
                 </CardContent>
               </Card>
