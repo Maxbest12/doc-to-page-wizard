@@ -25,9 +25,7 @@ const Footer = () => {
                 Een initiatief van ComOps voor praktijkgerichte IBM Maximo trainingen. 
                 Altijd up-to-date en direct toepasbaar in uw dagelijkse werk.
               </p>
-              <p className="text-sm text-primary-foreground/60">
-                Speciaal ontwikkeld voor IBM Maximo EAM en Maximo Manage (MAS 9)
-              </p>
+              <p className="text-sm text-primary-foreground/60">Speciaal ontwikkeld voor IBM Maximo EAM en Maximo Application Suite (MAS 8 en MAS 9)</p>
             </div>
 
             {/* Navigation */}
