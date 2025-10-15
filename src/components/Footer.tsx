@@ -1,15 +1,19 @@
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  const navigationLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Trainingen", href: "#trainingen" },
-    { name: "Over ons", href: "#over-ons" },
-    { name: "Contact", href: "#contact" },
-  ];
-
-  return (
-    <footer className="hero-gradient text-primary-foreground py-12">
+  const navigationLinks = [{
+    name: "Home",
+    href: "#home"
+  }, {
+    name: "Trainingen",
+    href: "#trainingen"
+  }, {
+    name: "Over ons",
+    href: "#over-ons"
+  }, {
+    name: "Contact",
+    href: "#contact"
+  }];
+  return <footer className="hero-gradient text-primary-foreground py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Main Footer Content */}
@@ -30,16 +34,11 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Navigatie</h4>
               <nav className="space-y-3">
-                {navigationLinks.map((link) => (
-                  <div key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate block"
-                    >
+                {navigationLinks.map(link => <div key={link.name}>
+                    <a href={link.href} className="text-primary-foreground/80 hover:text-primary-foreground transition-corporate block">
                       {link.name}
                     </a>
-                  </div>
-                ))}
+                  </div>)}
               </nav>
             </div>
 
@@ -48,21 +47,15 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <div className="space-y-3 text-primary-foreground/80">
                 <div>
-                  <p className="font-medium">MaximoDirect (ComOps)</p>
+                  <p className="font-medium">MaximoDirect | ComOps</p>
                 </div>
                 <div>
-                  <a 
-                    href="mailto:maximo@comops.nl"
-                    className="hover:text-primary-foreground transition-corporate"
-                  >
+                  <a href="mailto:maximo@comops.nl" className="hover:text-primary-foreground transition-corporate">
                     maximo@comops.nl
                   </a>
                 </div>
                 <div>
-                  <a 
-                    href="tel:+31641451785"
-                    className="hover:text-primary-foreground transition-corporate"
-                  >
+                  <a href="tel:+31641451785" className="hover:text-primary-foreground transition-corporate">
                     +31 (0)641451785
                   </a>
                 </div>
@@ -83,8 +76,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
