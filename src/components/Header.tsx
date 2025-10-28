@@ -1,15 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Languages } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const navigationItems = [
-    { name: "Home", href: "#home" },
-    { name: "Over Ons", href: "#waarom-maximodirect" },
-    { name: "Trainingen", href: "#trainingen" },
-    { name: "Contact", href: "#contact" },
+    { name: t("nav.home"), href: "#home" },
+    { name: t("nav.about"), href: "#waarom-maximodirect" },
+    { name: t("nav.trainings"), href: "#trainingen" },
+    { name: t("nav.contact"), href: "#contact" },
+  ];
+
+  const languages = [
+    { code: "nl", name: "Nederlands" },
+    { code: "en", name: "English" },
+    { code: "de", name: "Deutsch" },
+    { code: "fr", name: "Français" },
+    { code: "it", name: "Italiano" },
+    { code: "es", name: "Español" },
+    { code: "pl", name: "Polski" },
   ];
 
   return (
@@ -19,11 +38,11 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="text-2xl font-bold">MaximoDirect</div>
-            <div className="hidden sm:block text-sm opacity-80">een product van ComOps</div>
+            <div className="hidden sm:block text-sm opacity-80">{t("company.subtitle")}</div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             {navigationItems.map((item) => (
               <a
                 key={item.name}
@@ -33,6 +52,21 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
+            
+            {/* Language Selector */}
+            <Select value={language} onValueChange={(value) => setLanguage(value as any)}>
+              <SelectTrigger className="w-[140px] bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
+                <Languages className="mr-2 h-4 w-4" />
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {languages.map((lang) => (
+                  <SelectItem key={lang.code} value={lang.code}>
+                    {lang.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -60,6 +94,23 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
+              
+              {/* Mobile Language Selector */}
+              <div className="pt-3 border-t border-primary-muted/30">
+                <Select value={language} onValueChange={(value) => setLanguage(value as any)}>
+                  <SelectTrigger className="w-full bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
+                    <Languages className="mr-2 h-4 w-4" />
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {languages.map((lang) => (
+                      <SelectItem key={lang.code} value={lang.code}>
+                        {lang.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
           </nav>
         )}

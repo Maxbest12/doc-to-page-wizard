@@ -1,40 +1,43 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Monitor, Users, Clock, CheckCircle, Timer } from "lucide-react";
+import { Monitor, Users, CheckCircle, Timer } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const TrainingSection = () => {
+  const { t } = useLanguage();
+  
   const trainings = [
     {
-      title: "Maximo EAM",
-      versions: "Versies 7.5 en 7.6",
-      formats: ["E-learning", "Hybride training"],
+      title: t("trainings.eam.title"),
+      versions: t("trainings.eam.versions"),
+      formats: [t("trainings.eam.format1"), t("trainings.eam.format2")],
       icon: <Monitor className="h-6 w-6" />,
       features: [
-        "Flexibele online training",
-        "Zelf uw tempo bepalen", 
-        "6 maanden toegang",
-        "Onbeperkt herhalen"
+        t("trainings.eam.feature1"),
+        t("trainings.eam.feature2"), 
+        t("trainings.eam.feature3"),
+        t("trainings.eam.feature4")
       ]
     },
     {
-      title: "Maximo Manage", 
-      versions: "MAS 9",
-      formats: ["Klassikale trainingen"],
+      title: t("trainings.manage.title"), 
+      versions: t("trainings.manage.versions"),
+      formats: [t("trainings.manage.format1")],
       icon: <Users className="h-6 w-6" />,
       features: [
-        "Begeleid door ervaren trainers",
-        "Interactieve sessies",
-        "Praktische oefeningen",
-        "Directe feedback"
+        t("trainings.manage.feature1"),
+        t("trainings.manage.feature2"),
+        t("trainings.manage.feature3"),
+        t("trainings.manage.feature4")
       ]
     }
   ];
 
   const benefits = [
-    "Praktijkgericht leren met direct resultaat",
-    "Flexibele E-learning op eigen tempo", 
-    "Altijd up-to-date met nieuwste versies",
-    "Realistische praktijkvoorbeelden"
+    t("trainings.benefit1"),
+    t("trainings.benefit2"), 
+    t("trainings.benefit3"),
+    t("trainings.benefit4")
   ];
 
   return (
@@ -42,11 +45,9 @@ const TrainingSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="mb-6 text-primary">Basistraining IBM Maximo</h2>
+            <h2 className="mb-6 text-primary">{t("trainings.title")}</h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Wilt u de basis van IBM Maximo onder de knie krijgen? Bij MaximoDirect kiest u zelf 
-              de vorm die bij u past. Onze trainingen zijn kort, krachtig en gericht op het aanleren 
-              van de fundamenten van Maximo.
+              {t("trainings.subtitle")}
             </p>
           </div>
 
@@ -88,7 +89,7 @@ const TrainingSection = () => {
 
           {/* Benefits Grid */}
           <div className="text-center mb-12">
-            <h3 className="mb-8 text-primary">Waarom MaximoDirect?</h3>
+            <h3 className="mb-8 text-primary">{t("trainings.why.title")}</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <Card key={index} className="p-6 border-primary/20">
@@ -106,20 +107,16 @@ const TrainingSection = () => {
           {/* Description Sections */}
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="p-8 bg-card">
-              <h3 className="mb-4 text-primary">Praktijkgericht Leren</h3>
+              <h3 className="mb-4 text-primary">{t("trainings.practical.title")}</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Waar andere cursussen vaak theoretisch blijven, legt MaximoDirect de nadruk op 
-                gebruiksgemak en toepasbaarheid. U werkt met realistische praktijkvoorbeelden 
-                en oefeningen, zodat u de opgedane kennis direct kunt toepassen binnen uw organisatie.
+                {t("trainings.practical.description")}
               </p>
             </Card>
 
             <Card className="p-8 bg-card">
-              <h3 className="mb-4 text-primary">Altijd Up-to-date</h3>
+              <h3 className="mb-4 text-primary">{t("trainings.uptodate.title")}</h3>
               <p className="text-muted-foreground leading-relaxed">
-                IBM Maximo blijft zich ontwikkelen. Zodra er een nieuwe versie beschikbaar komt, 
-                ontwikkelt MaximoDirect direct een bijpassende training. Zo blijft uw kennis 
-                altijd actueel en bent u verzekerd van de nieuwste inzichten en functionaliteiten.
+                {t("trainings.uptodate.description")}
               </p>
             </Card>
           </div>

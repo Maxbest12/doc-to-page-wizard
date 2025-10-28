@@ -1,23 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, Building2, ArrowRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
+  
   const contactInfo = [
     {
       icon: <Building2 className="h-6 w-6" />,
-      label: "Wij zijn",
-      value: "MaximoDirect | ComOps"
+      label: t("contact.company.label"),
+      value: t("contact.company.value")
     },
     {
       icon: <Mail className="h-6 w-6" />,
-      label: "E-mail",
+      label: t("contact.email.label"),
       value: "maximo@comops.nl",
       link: "mailto:maximo@comops.nl"
     },
     {
       icon: <Phone className="h-6 w-6" />,
-      label: "Telefoon", 
+      label: t("contact.phone.label"), 
       value: "+31 (0)641451785",
       link: "tel:+31641451785"
     }
@@ -29,10 +32,9 @@ const ContactSection = () => {
         <div className="max-w-4xl mx-auto text-center text-primary-foreground">
           {/* CTA Header */}
           <div className="mb-16">
-            <h2 className="mb-6">Zoekt u een praktijkgerichte IBM Maximo training die écht resultaat oplevert?</h2>
+            <h2 className="mb-6">{t("contact.title")}</h2>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Neem vandaag nog contact met ons op voor meer informatie over onze trainingen 
-              en hoe wij uw organisatie kunnen helpen met IBM Maximo.
+              {t("contact.description")}
             </p>
             
             <Button 
@@ -42,7 +44,7 @@ const ContactSection = () => {
               asChild
             >
               <a href="mailto:maximo@comops.nl">
-                Neem Contact Op
+                {t("contact.cta")}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>

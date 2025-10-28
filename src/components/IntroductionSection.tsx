@@ -1,22 +1,25 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Target, Users } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const IntroductionSection = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: <Shield className="h-8 w-8 text-primary" />,
-      title: "Enterprise Asset Management",
-      description: "Speciaal ontwikkeld voor IBM Maximo EAM en Maximo Manage (MAS 9) implementaties"
+      title: t("intro.feature1.title"),
+      description: t("intro.feature1.description")
     },
     {
       icon: <Target className="h-8 w-8 text-primary" />,
-      title: "Direct Toepasbaar", 
-      description: "Praktijkgerichte trainingen die u onmiddellijk kunt gebruiken in uw dagelijkse werk"
+      title: t("intro.feature2.title"), 
+      description: t("intro.feature2.description")
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
-      title: "Voor Organisaties & Professionals",
-      description: "Geschikt voor zowel teams als individuele professionals die Maximo willen leren"
+      title: t("intro.feature3.title"),
+      description: t("intro.feature3.description")
     }
   ];
 
@@ -25,14 +28,10 @@ const IntroductionSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="mb-6 text-primary">Introductie MaximoDirect</h2>
+            <h2 className="mb-6 text-primary">{t("intro.title")}</h2>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg md:text-xl leading-relaxed text-muted-foreground mb-8">
-                MaximoDirect is een initiatief van ComOps, speciaal ontwikkeld om organisaties en 
-                professionals snel en effectief vertrouwd te maken met het werken in IBM Maximo EAM 
-                en Maximo Manage (MAS 9). Het implementeren of beheren van een Enterprise Asset 
-                Management (EAM) systeem kan een uitdaging zijn. Daarom bieden wij praktijkgerichte 
-                trainingen die direct toepasbaar zijn in uw dagelijkse werk.
+                {t("intro.description")}
               </p>
             </div>
           </div>

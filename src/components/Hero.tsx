@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-cloud.jpg";
 import logoWit from "@/assets/logo_wit.png";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="home" className="relative min-h-screen flex items-center">
       {/* Background Image */}
@@ -26,13 +29,11 @@ const Hero = () => {
           </div>
           
           <h1 className="mb-6 leading-tight">
-            Praktijkgerichte IBM Maximo Trainingen
+            {t("hero.title")}
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90 max-w-3xl mx-auto">
-            MaximoDirect helpt organisaties en professionals snel en effectief 
-            vertrouwd te raken met IBM Maximo EAM en Maximo Manage (MAS 9). 
-            Praktische trainingen die direct toepasbaar zijn in uw dagelijkse werk.
+            {t("hero.description")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -43,7 +44,7 @@ const Hero = () => {
               asChild
             >
               <a href="#trainingen">
-                Bekijk Trainingen
+                {t("hero.cta.trainings")}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
@@ -54,7 +55,7 @@ const Hero = () => {
               className="text-lg px-8 py-6 shadow-corporate"
               asChild
             >
-              <a href="#contact">Neem Contact Op</a>
+              <a href="#contact">{t("hero.cta.contact")}</a>
             </Button>
           </div>
         </div>
